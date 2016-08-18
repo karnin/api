@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Home\IndexController@index');
+Route::get('api', 'Home\ApiController@index');
+Route::get('dictionary', 'Home\DictionaryController@index');
+Route::get('errorCode', 'Home\ErrorCodeController@index');
+
