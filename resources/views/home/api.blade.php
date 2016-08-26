@@ -26,7 +26,7 @@
 @stop
 @section('content')
     <div class="row">
-        <div class="col-lg-2">
+        <div class="col-lg-3">
             <div class="ibox ">
                 <div class="ibox-content">
                     <div class="dd" id="nestable">
@@ -34,9 +34,9 @@
                             <?php $i = 1;?>
                             @foreach($api_list as $key=>$value)
                                 <li class="dd-item" v-on:click="showApi({{ $value['api_id'] }})">
-                                    <div class="dd-handle">{{ $i }} - {{ $value['api_name'] }}
-                                    @if($value['api_status']==1)
-                                        <a class="btn btn-danger btn-xs" href="buttons.html#">测试</a>
+                                    <div class="dd-handle">{{ $i }} - {{ $value['api_name'] }}{{ $value['api_status'] }}
+                                    @if($value['api_status']==2)
+                                        <a class="btn btn-danger btn-xs" >测试</a>
                                         @endif
                                     </div>
                                 </li>
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-10" v-show="api_show">
+        <div class="col-lg-9" v-show="api_show">
             <div class="ibox">
                 <div class="ibox-content contents">
                     <div class="info_api" style="border:1px solid #ddd;margin-bottom:20px;">
