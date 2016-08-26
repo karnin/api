@@ -34,7 +34,7 @@
                             <?php $i = 1;?>
                             @foreach($api_list as $key=>$value)
                                 <li class="dd-item" v-on:click="showApi({{ $value['api_id'] }})">
-                                    <div class="dd-handle">{{ $i }} - {{ $value['api_name'] }}{{ $value['api_status'] }}
+                                    <div class="dd-handle">{{ $i }} - {{ $value['api_name'] }}
                                     @if($value['api_status']==2)
                                         <a class="btn btn-danger btn-xs" >测试</a>
                                         @endif
@@ -201,6 +201,7 @@
 @stop
 @section('js')
     <script>
+
         Vue.config.devtools = true
         Vue.config.delimiters = ['${', '}']
         new Vue({
