@@ -59,36 +59,7 @@
                                             v-text="api_obj.api_url"></span> </kbd>
                             </div>
                         </div>
-                        <div class="ibox float-e-margins">
-                            <div class="ibox-title">
-                                <h5>请求头</h5>
-                                <div class="ibox-tools">
-                                    <a class="collapse-link"> <i class="fa fa-chevron-up"></i> </a>
-                                </div>
-                            </div>
-                            <div class="ibox-content">
-                                <table class="table table-hover ">
-                                    <thead>
-                                    <tr>
-                                        <th width="15%">名称</th>
-                                        <th width="10%">是否必须</th>
-                                        <th width="10%">类型</th>
-                                        <th width="15%">默认值</th>
-                                        <th width="25%">备注</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr v-for="item in api_obj.api_header">
-                                        <td><span v-text="item.name"></span></td>
-                                        <td><span v-text="item.status"></span></td>
-                                        <td><span v-text="item.type"></span></td>
-                                        <td><span v-text="item.default"></span></td>
-                                        <td><span v-text="item.comment"></span></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
                                 <h5>请求参数</h5>
@@ -169,6 +140,36 @@
                             </div>
                             <div class="ibox-content">
                                 <pre><span v-text="api_obj.api_response_content"></span></pre>
+                            </div>
+                        </div>
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>请求头</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link"> <i class="fa fa-chevron-up"></i> </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <table class="table table-hover ">
+                                    <thead>
+                                    <tr>
+                                        <th width="15%">名称</th>
+                                        <th width="10%">是否必须</th>
+                                        <th width="10%">类型</th>
+                                        <th width="15%">默认值</th>
+                                        <th width="25%">备注</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr v-for="item in api_obj.api_header">
+                                        <td><span v-text="item.name"></span></td>
+                                        <td><span v-text="item.status"></span></td>
+                                        <td><span v-text="item.type"></span></td>
+                                        <td><span v-text="item.default"></span></td>
+                                        <td><span v-text="item.comment"></span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <div class="ibox float-e-margins">

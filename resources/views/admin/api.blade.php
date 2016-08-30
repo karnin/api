@@ -468,7 +468,7 @@
                                         <td><input type="text" v-model="item.comment" class="form-control"></td>
                                         <td>
                                             <button type="button" class="btn  btn-primary btn-xs"
-                                                    v-on:click="response_remove(item)">删除
+                                                    v-on:click="update_response_remove(item)">删除
                                             </button>
                                         </td>
                                     </tr>
@@ -554,7 +554,7 @@
                 type_list: [{value: '请选择', text: '请选择'}, {value: 'string', text: 'string'}, {
                     value: 'ini',
                     text: 'ini'
-                }, {value: 'json', text: 'json'}, {value: '其他', text: '其他'}],
+                },{value: 'double', text: 'double'}, {value: 'json', text: 'json'}, {value: '其他', text: '其他'}],
                 null_list: [{value: '请选择', text: '请选择'}, {value: '是', text: '是'}, {value: '否', text: '否'}],
                 position_list: [{value: '请选择', text: '请选择'}, {value: 'url', text: 'url'}, {value: '普通', text: '普通'}],
                 projectName: "{{ $project_name }}",
