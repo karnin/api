@@ -605,6 +605,8 @@
                 copy_button: function (obj) {
 
                     this.copyPost.api_id = obj.api_id;
+                    this.copyPost.api_name = obj.api_name;
+                    this.copyPost.api_url = obj.api_url;
                     $('#modal_copy').modal('toggle');
                 },
                 copy_submit: function () {
