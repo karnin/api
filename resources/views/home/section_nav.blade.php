@@ -21,7 +21,7 @@
                                 <ul class="nav nav-third-level in">
                                     @foreach($value['version'] as $k=>$v)
                                     <li>
-                                        <a href="{{ url('api',[$v['version_id']]) }}">{{ $v['version_name'] }}</a>
+                                        <a href="{{ url('api',[$v['version_id']]) }}" >{{ $v['version_name'] }}</a>
                                     </li>
                                     @endforeach
                                 </ul>

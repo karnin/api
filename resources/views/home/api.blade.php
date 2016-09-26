@@ -32,7 +32,7 @@
                     <div class="dd" id="nestable">
                         <ol class="dd-list">
                             <?php $i = 1;?>
-                            @foreach($api_list as $key=>$value)
+                          @foreach($api_list as $key=>$value)
                                 <li class="dd-item" v-on:click="showApi({{ $value['api_id'] }})">
                                     <div class="dd-handle">{{ $i }} - {{ $value['api_name'] }}
                                     @if($value['api_status']==2)
@@ -42,6 +42,7 @@
                                 </li>
                                 <?php $i++;?>
                             @endforeach
+
                         </ol>
                     </div>
                 </div>
@@ -60,14 +61,20 @@
                             </div>
                         </div>
 
-                        <div class="ibox float-e-margins">
+                        <div class="ibox float-e-margins" >
+
                             <div class="ibox-title">
                                 <h5>请求参数</h5>
                                 <div class="ibox-tools">
-                                    <a class="collapse-link"> <i class="fa fa-chevron-up"></i> </a>
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up" ></i>
+
+                                    </a>
                                 </div>
                             </div>
-                            <div class="ibox-content">
+
+                            <div class="ibox-content" >
+                           <div class="ibox-content"  >
                                 <table class="table table-hover ">
                                     <thead>
                                     <tr>
@@ -210,6 +217,7 @@
             data: {
                 api_show: false,
                 api_get: "{{ url('apiGet') }}",
+                version_get: "{{ url('versionGet') }}",
                 api_obj: {
                     version_name: '',
                     api_id: 0,
@@ -225,7 +233,13 @@
                     api_response_content: '',
                     api_request_content: '',
                     api_error_code: '',
-                }
+                },
+                version_obj:{
+                    api_id:0,
+                    api_name:'',
+                    api_status:1
+                },
+                version_show: false
             },
             methods: {
                 showApi: function (id) {
@@ -236,6 +250,22 @@
 
                             _this.api_obj = data.data.success.data;
                             _this.api_show=true;
+                        } else {
+                            alert('无此接口');
+                        }
+
+                    }, function () {
+                        alert('网络错误');
+                    });
+                },
+                showVersion: function (id) {
+                    var _this = this;
+                    this.$http.get(this.version_get + '/' + id).then(function (data) {
+
+                        if (data.data.code == 1) {
+
+                            _this.version_obj = data.data.success.data;
+                            _this.version_show=true;
                         } else {
                             alert('无此接口');
                         }

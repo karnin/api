@@ -554,7 +554,7 @@
                 type_list: [{value: '请选择', text: '请选择'}, {value: 'string', text: 'string'}, {
                     value: 'ini',
                     text: 'ini'
-                },{value: 'double', text: 'double'}, {value: 'json', text: 'json'}, {value: '其他', text: '其他'}],
+                },{value: 'double', text: 'double'}, {value: 'json', text: 'json'}, {value: 'array', text: 'array'},{value: '其他', text: '其他'}],
                 null_list: [{value: '请选择', text: '请选择'}, {value: '是', text: '是'}, {value: '否', text: '否'}],
                 position_list: [{value: '请选择', text: '请选择'}, {value: 'url', text: 'url'}, {value: '普通', text: '普通'}],
                 projectName: "{{ $project_name }}",

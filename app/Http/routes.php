@@ -14,6 +14,7 @@
 Route::get('/', 'Home\IndexController@index');
 Route::get('api/{version_id}', 'Home\ApiController@index');
 Route::get('apiGet/{api_id}', 'Home\ApiGetController@index');
+Route::get('versionGet/{version_id}', 'Home\VersionGetController@index');
 Route::get('dictionary', 'Home\DictionaryController@index');
 Route::get('errorCode', 'Home\ErrorCodeController@index');
 
