@@ -37,6 +37,10 @@
                                     <div class="dd-handle">{{ $i }} - {{ $value['api_name'] }}
                                     @if($value['api_status']==2)
                                         <a class="btn btn-danger btn-xs" >测试</a>
+                                        @elseif($value['api_status']==3)
+                                            <a class="btn btn-primary btn-xs" >新增</a>
+                                        @elseif($value['api_status']==4)
+                                            <a class="btn btn-warning btn-xs" >有改动</a>
                                         @endif
                                     </div>
                                 </li>

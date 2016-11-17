@@ -550,7 +550,7 @@
                     value: 'put',
                     text: 'put'
                 }, {value: 'delete', text: 'delete'}],
-                status_list: [{value: '请选择', text: '请选择'}, {value: '1', text: '正常'}, {value: '2', text: '测试'}],
+                status_list: [{value: '请选择', text: '请选择'}, {value: '1', text: '正常'}, {value: '2', text: '测试'},{value: '3', text: '新增'},{value: '4', text: '有改动'}],
                 type_list: [{value: '请选择', text: '请选择'}, {value: 'string', text: 'string'}, {
                     value: 'ini',
                     text: 'ini'
