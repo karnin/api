@@ -37,7 +37,9 @@
                         <tr>
                             <th>id
                             </th>
-                            <th>版本名称</th>
+                            <th>编号</th>
+                            <th>接口名称</th>
+
                             <th>操作</th>
                         </tr>
                         </thead>
@@ -46,6 +48,7 @@
                         @foreach($data as $key=>$value)
                             <tr>
                                 <td>{{ $value['api_id'] }}</td>
+                                <td>{{ $value['api_sort'] }}</td>
                                 <td>
                                     {{ $value['api_name'] }}
                                 </td>
@@ -109,6 +112,10 @@
                         <div class="form-group"><label class="col-lg-2 control-label">名称</label>
                             <div class="col-lg-10"><input type="text" name="version_name" v-model="addPost.api_name"
                                                           id="api_name" placeholder="名称" class="form-control"></div>
+                        </div>
+                        <div class="form-group"><label class="col-lg-2 control-label">编号</label>
+                            <div class="col-lg-10"><input type="text" name="api_sort" v-model="addPost.api_sort"
+                                                          id="api_sort" placeholder="编号" class="form-control"></div>
                         </div>
                         <div class="form-group"><label class="col-lg-2 control-label">url</label>
                             <div class="col-lg-10"><input type="text" name="version_name" v-model="addPost.api_url"
@@ -313,6 +320,10 @@
                         <div class="form-group"><label class="col-lg-2 control-label">名称</label>
                             <div class="col-lg-10"><input type="text" name="version_name" v-model="post.api_name"
                                                          id="api_name" placeholder="名称" class="form-control"></div>
+                        </div>
+                        <div class="form-group"><label class="col-lg-2 control-label">编号</label>
+                            <div class="col-lg-10"><input type="text" name="api_sort" v-model="post.api_sort"
+                                                          id="api_sort" placeholder="编号" class="form-control"></div>
                         </div>
                         <div class="form-group"><label class="col-lg-2 control-label">url</label>
                             <div class="col-lg-10"><input type="text" name="version_name" v-model="post.api_url"
@@ -570,6 +581,7 @@
                 addPost: {
                     version_id: "{{ $version_id }}",
                     api_name: '',
+                    api_sort: 0,
                     api_content: '',
                     api_status: '1',
                     api_url: "{{ $project_api_url }}/{{ $version_name }}",
@@ -586,6 +598,7 @@
                 post: {
                     version_id: "{{ $version_id }}",
                     api_name: '',
+                    api_sort: 0,
                     api_content: '',
                     api_status: '',
                     api_url: "{{ $project_api_url }}/{{ $version_name }}",

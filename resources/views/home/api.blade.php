@@ -31,10 +31,10 @@
                 <div class="ibox-content">
                     <div class="dd" id="nestable">
                         <ol class="dd-list">
-                            <?php $i = 1;?>
+
                           @foreach($api_list as $key=>$value)
                                 <li class="dd-item" v-on:click="showApi({{ $value['api_id'] }})">
-                                    <div class="dd-handle">{{ $i }} - {{ $value['api_name'] }}
+                                    <div class="dd-handle">{{ $value['api_sort'] }} - {{ $value['api_name'] }}
                                     @if($value['api_status']==2)
                                         <a class="btn btn-danger btn-xs" >测试</a>
                                         @elseif($value['api_status']==3)
@@ -44,7 +44,7 @@
                                         @endif
                                     </div>
                                 </li>
-                                <?php $i++;?>
+
                             @endforeach
 
                         </ol>

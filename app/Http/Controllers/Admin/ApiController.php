@@ -32,6 +32,7 @@ class ApiController extends AuthController
         $version_id = $request->get('version_id');
         $api_url = $request->get('api_url');
         $api_name = $request->get('api_name');
+        $api_sort = $request->get('api_sort');
         $api_content = $request->get('api_content');
         $api_status = $request->get('api_status');
         $api_method = $request->get('api_method');
@@ -51,6 +52,7 @@ class ApiController extends AuthController
             'version_id' => $version_id,
             'api_url' =>$api_url ,
             'api_name' =>$api_name ,
+            'api_sort' =>$api_sort ,
             'api_content' =>$api_content ,
             'api_status' =>$api_status ,
             'api_method' =>$api_method ,
@@ -83,6 +85,7 @@ class ApiController extends AuthController
 
         $api_url = $request->get('api_url');
         $api_name = $request->get('api_name');
+        $api_sort = $request->get('api_sort');
         $api_content = $request->get('api_content');
         $api_status = $request->get('api_status');
         $api_method = $request->get('api_method');
@@ -96,7 +99,7 @@ class ApiController extends AuthController
 
         $data=[
 
-
+            'api_sort'=>$api_sort,
             'api_url' =>$api_url ,
             'api_name' =>$api_name ,
             'api_content' =>$api_content ,

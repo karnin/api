@@ -19,6 +19,7 @@
                         <thead>
                         <tr>
                             <th>id</th>
+
                             <th>版本名称</th>
                             <th>操作</th>
 
@@ -28,6 +29,7 @@
                         @foreach($data as $key=>$value)
                         <tr>
                             <td>{{ $value['version_id'] }}</td>
+
                             <td><a href="{{ url('admin/api',[$value['version_id']]) }}">{{ $value['version_name'] }}</a></td>
 
                             <td>
@@ -41,6 +43,13 @@
                         @endforeach
                         </tbody>
                     </table>
+                </div>
+                <div class="ibox-title">
+
+                    <div class="ibox-tools">
+                        <button type="button" class="btn btn-w-m btn-primary" v-on:click="sort()">排序
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
